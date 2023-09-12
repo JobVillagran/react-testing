@@ -20,6 +20,8 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
     - uses: actions/checkout@v3
+    - name: Limpiar caché de npm  # Nuevo paso para limpiar la caché de npm
+      run: npm cache clean -f
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
