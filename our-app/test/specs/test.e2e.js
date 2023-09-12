@@ -1,0 +1,22 @@
+/*const { expect, browser, $ } = require('@wdio/globals')
+
+describe('My Login application', () => {
+    it('should login with valid credentials', async () => {
+        await browser.url(`https://the-internet.herokuapp.com/login`)
+
+        await $('#username').setValue('tomsmith')
+        await $('#password').setValue('SuperSecretPassword!')
+        await $('button[type="submit"]').click()
+
+        await expect($('#flash')).toBeExisting()
+        await expect($('#flash')).toHaveTextContaining(
+            'You logged into a secure area!')
+    })
+})*/
+
+describe('My React application', () => {
+    it('should look correct', () => {
+        browser.url(`/`);
+        browser.checkVisualRegression('Home Page'); // Esta línea toma una captura de pantalla y la compara
+    });
+});
